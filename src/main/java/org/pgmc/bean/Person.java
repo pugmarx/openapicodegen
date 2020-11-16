@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -16,7 +17,7 @@ import org.hibernate.validator.constraints.CreditCardNumber;
 @XmlRootElement(name = "person")
 @XmlAccessorType(XmlAccessType.FIELD)
 
-@Getter @Setter @ToString
+@Getter @Setter @ToString @AllArgsConstructor
 @DynamoDBTable(tableName = "Person")
 public class Person {
     @DynamoDBHashKey
