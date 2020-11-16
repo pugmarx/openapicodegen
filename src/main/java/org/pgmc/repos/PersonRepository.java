@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @EnableScan
 public interface PersonRepository extends
-        CrudRepository<Person, String> {
+        CrudRepository<Person, Long> {
 
-    Optional<Person> findById(String id);
+    Optional<Person> findById(Long id);
 }
